@@ -133,6 +133,33 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .ledger-entry .button { margin-top: 14px; }
 .lead-entry { margin: 24px 0 0; padding: 40px 34px; gap: 40px; border: 0; }
 .lead-entry .eyebrow { color: #405447; padding-right: 25px; }
+.campaign-feature { grid-template-columns: 1fr; gap: 26px; }
+.campaign-body { display: grid; grid-template-columns: minmax(180px, .65fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 54px); align-items: start; }
+.campaign-body > .campaign-preview { width: min(100%, 300px); margin: 0; }
+.campaign-body .campaign-preview figcaption, .campaign-body .campaign-quote cite { color: var(--soft); }
+.campaign-copy { min-width: 0; }
+.campaign-copy .campaign-quote { margin: 28px 0; }
+.writing-feature { grid-template-columns: 1fr; gap: 22px; }
+.writing-feature > div:last-child { max-width: 760px; margin-left: clamp(0px, 10vw, 100px); }
+.writing-feature .writing-specimen { margin: 26px 0; border: 0; padding: 28px clamp(24px, 4vw, 44px); }
+.writing-feature .writing-specimen .eyebrow { color: #405447; }
+.strategy-feature > div { min-width: 0; }
+.strategy-sequence { grid-column: 1 / -1; }
+.strategy-sequence ol { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; counter-reset: strategy-step; padding: 0; margin: 0; gap: 24px; }
+.strategy-sequence li { counter-increment: strategy-step; padding-top: 20px; border-top: 2px solid var(--rule); font-size: 16px; line-height: 1.5; }
+.strategy-sequence li::before { content: counter(strategy-step, decimal-leading-zero); display: block; margin-bottom: 18px; color: var(--sun); font: 800 30px/1 var(--sans); font-stretch: 125%; }
+.strategy-feature > .text-link { grid-column: 1 / -1; justify-self: start; }
+@media (max-width: 760px) {
+  .campaign-body { grid-template-columns: minmax(130px, .65fr) minmax(0, 1fr); gap: 26px; }
+  .strategy-sequence ol { grid-template-columns: 1fr; gap: 0; }
+  .strategy-sequence li { display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 18px 0; border-top-width: 1px; }
+  .strategy-sequence li::before { margin: 0; font-size: 24px; }
+}
+@media (max-width: 520px) {
+  .campaign-body { grid-template-columns: 1fr; }
+  .campaign-body > .campaign-preview { justify-self: center; }
+  .writing-feature > div:last-child { margin-left: 0; }
+}
 .project-jump { display: flex; flex-wrap: wrap; gap: 4px 20px; padding: 15px 0; border-bottom: 1px solid var(--rule); }
 .project-jump a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
 .ledger-entry[id] { scroll-margin-top: 105px; }
