@@ -1,5 +1,6 @@
 :root {
   --deep: #132A22;
+  --header-bg: #071811;
   --pine: #1F4034;
   --bone: #F5EDDF;
   --soft: #C7D3C7;
@@ -44,7 +45,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .open-corner { --cut: clamp(28px, 4vw, 54px); clip-path: polygon(0 0, calc(100% - var(--cut)) 0, calc(100% - var(--cut)) var(--cut), 100% var(--cut), 100% 100%, 0 100%); }
 .skip-link { position: fixed; left: 20px; top: -90px; z-index: 100; background: var(--bone); color: var(--deep); padding: 12px 20px; }
 .skip-link:focus { top: 14px; outline-color: var(--deep); }
-.site-header { position: sticky; top: 0; z-index: 30; background: var(--deep); border-bottom: 1px solid var(--rule); }
+.site-header { position: sticky; top: 0; z-index: 30; background: var(--header-bg); border-bottom: 1px solid var(--rule); }
 .header-inner { position: relative; max-width: 1160px; padding: 18px clamp(22px, 5vw, 60px); margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .brand, .footer-brand { font: 600 38px/1 var(--serif); letter-spacing: -.06em; text-decoration: none; white-space: nowrap; }
 .site-nav { display: flex; align-items: center; gap: 30px; }
@@ -268,7 +269,7 @@ blockquote cite { display: block; font: 400 12px/1.6 var(--sans); color: var(--s
   .header-inner { flex-wrap: wrap; gap: 20px; padding-top: 16px; padding-bottom: 16px; }
   .site-nav { flex-basis: 100%; justify-content: space-between; gap: 12px; }
   html.js .menu-toggle { display: inline-flex; }
-  html.js .site-nav { position: absolute; top: 100%; left: 0; right: 0; padding: 0 22px; display: block; background: var(--deep); max-height: 0; opacity: 0; visibility: hidden; overflow: hidden; transition: max-height .22s ease, opacity .18s ease, visibility .22s; }
+  html.js .site-nav { position: absolute; top: 100%; left: 0; right: 0; padding: 0 22px; display: block; background: var(--header-bg); max-height: 0; opacity: 0; visibility: hidden; overflow: hidden; transition: max-height .22s ease, opacity .18s ease, visibility .22s; }
   html.js .site-nav.is-open { max-height: 320px; opacity: 1; visibility: visible; border-bottom: 1px solid var(--rule); padding-bottom: 16px; }
   html.js .site-nav a { display: flex; min-height: 52px; padding: 14px 0; border-top: 1px solid var(--rule); }
   .section { padding: 50px 0; }
