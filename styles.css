@@ -69,6 +69,37 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .surname > span { display: block; padding: .07em .11em .08em; background: var(--bone) url("assets/paper.jpg"); background-size: 500px; background-blend-mode: multiply; color: var(--deep); transform: rotate(var(--tilt)); clip-path: polygon(1% 2%, 97% 0, 100% 96%, 2% 100%); }
 .hero-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: end; }
 .professional-role { font: 500 clamp(20px, 2.5vw, 27px)/1.3 var(--sans); margin-bottom: 0; }
+.hero-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(28px, 4vw, 48px); }
+.hero-identity { min-width: 0; }
+.hero-identity .wordmark { margin: 0 0 32px; }
+.hero-identity .first-name { font-size: clamp(90px, 13vw, 160px); }
+.hero-identity .surname { font-size: clamp(35px, 6.4vw, 76px); margin-top: 24px; }
+.hero-identity .hero-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.hero-photo { padding: 10px; }
+.hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 45%; }
+.featured-artifact.event-photo { transform: none; padding: 0; }
+.event-photo img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.invitation:has(.event-photo) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; }
+.speaking-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 36px; align-items: center; }
+.speaking-intro .page-title { font-size: clamp(36px, 6vw, 70px); }
+.speaking-photo { padding: 10px 10px 14px; }
+.speaking-photo img { width: 100%; }
+.speaking-photo figcaption { color: var(--deep); }
+.block-party-photo { margin-top: 32px; }
+.block-party-photo img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+@media (max-width: 760px) {
+  .hero-layout, .speaking-layout { grid-template-columns: 1fr; gap: 28px; }
+  .hero-identity .first-name { font-size: clamp(90px, 23vw, 160px); }
+  .hero-identity .surname { font-size: clamp(35px, 10vw, 76px); margin-top: 18px; }
+  .hero-identity .wordmark { margin-bottom: 24px; }
+  .hero-identity .hero-bottom { gap: 18px; }
+  .hero-photo { max-width: 460px; width: 100%; }
+  .hero-photo img { aspect-ratio: 1/1; object-position: 50% 35%; }
+  .invitation:has(.event-photo) { grid-template-columns: 1fr; }
+  .invitation .event-photo { width: 100%; margin: 0; }
+  .speaking-intro .page-title { font-size: clamp(30px, 7.5vw, 56px); }
+  .speaking-photo { width: 100%; max-width: 600px; }
+}
 .personal-line { font: 500 clamp(21px, 2.7vw, 31px)/1.18 var(--serif); border-left: 3px solid var(--bone); padding-left: 22px; margin-bottom: 0; }
 .positioning-section { padding: 0 0 16px; }
 .positioning-sheet { margin-left: 18%; padding: 38px clamp(25px, 5vw, 58px); }
