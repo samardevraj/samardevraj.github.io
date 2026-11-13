@@ -80,9 +80,6 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .positioning-sheet .positioning-role { margin-top: -8px; }
 .hero-photo { padding: 10px; }
 .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 45%; }
-.featured-artifact.event-photo { transform: none; padding: 0; }
-.event-photo img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
-.invitation:has(.event-photo) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; }
 .speaking-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 36px; align-items: center; }
 .speaking-intro .page-title { font-size: clamp(36px, 6vw, 70px); }
 .speaking-photo { padding: 10px 10px 14px; }
@@ -96,8 +93,6 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
   .hero-identity .first-name { font-size: clamp(75px, 15vw, 110px); }
   .hero-identity .surname { font-size: clamp(32px, 7.1vw, 52px); margin-top: 18px; }
   .hero-photo { width: 100%; }
-  .invitation:has(.event-photo) { grid-template-columns: 1fr; }
-  .invitation .event-photo { width: 100%; margin: 0; }
   .speaking-intro .page-title { font-size: clamp(30px, 7.5vw, 56px); }
   .speaking-photo { width: 100%; max-width: 600px; }
 }
